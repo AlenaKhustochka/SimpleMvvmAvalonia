@@ -8,7 +8,6 @@ using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Markup.Xaml;
 using Avalonia.Interactivity;
-using SimpleMvvmAvalonia.ViewModels;
 
 namespace SimpleMvvmAvalonia.Views
 {
@@ -22,6 +21,21 @@ namespace SimpleMvvmAvalonia.Views
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
+        }
+
+        public async void OnChooseFileClick(object sender, RoutedEventArgs e)
+        {
+            var window = new OpenFileDialog()
+            {
+                Title = "Выбор файла"
+            };
+            window.AllowMultiple = false;
+            var result = await window.ShowAsync(this);
+            if (result.Length != 0)
+            {
+                dynamic viewModel = DataContext;
+                viewModel.SelectedFile(result[0]);
+            }
         }
     }
 }
