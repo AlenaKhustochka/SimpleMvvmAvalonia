@@ -1,0 +1,12 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:v="clr-namespace:SimpleMvvmAvalonia.Views"
+        xmlns:vm="clr-namespace:SimpleMvvmAvalonia.ViewModels"
+        xmlns:i="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
+        xmlns:ia="clr-namespace:Avalonia.Xaml.Interactions.Core;assembly=Avalonia.Xaml.Interactions"
+        x:Class="SimpleMvvmAvalonia.Views.MainWindow"
+        Title="Пример MVVM на avalonia"
+        Height="470" Width="800"
+        MinHeight="470" MinWidth="800" >
+        
+</Window>
