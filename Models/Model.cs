@@ -16,6 +16,11 @@ namespace SimpleMvvmAvalonia.Models
         {
             AddLog($"Запись в файл {file} начата!");
 
+            using (StreamWriter writer = new StreamWriter(file))
+            {
+                await writer.WriteLineAsync("٩(｡•́‿•̀｡)۶");
+            }
+
             for(int i = 0; i < 3; i++)
             {
                 Console.WriteLine("просто спим секунду");
